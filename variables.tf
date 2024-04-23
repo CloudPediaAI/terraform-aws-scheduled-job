@@ -36,7 +36,7 @@ variable "lambda_runtime" {
   default     = "nodejs20.x"
   description = "Runtime identifier based on the language and version the scheduled-job code is written. All supported runtimes are listed in README."
   validation {
-    condition     = contains(["nodejs20.x", "nodejs18.x", "nodejs16.x", "python3.12", "python3.11", "python3.10", "python3.9", "python3.8", null], var.lambda_runtime)
+    condition     = contains(["nodejs20.x", "nodejs18.x", "python3.12", "python3.11", "python3.10", "python3.9", "python3.8", null], var.lambda_runtime)
     error_message = "Unsupported runtime <${var.lambda_runtime}>"
   }
 }

@@ -17,3 +17,17 @@ This Terraform module will package your Nodejs/Python code and upload to Lambda,
 - [Documentation](https://cloudpedia.ai/terraform-module/aws-lambdalayer-python/)
 - [Terraform module](https://registry.terraform.io/modules/cloudpediaai/lambdalayer-python/aws/latest)
 - [GitHub Repo](https://github.com/CloudPediaAI/terraform-aws-lambdalayer-python)
+
+# Release Notes
+
+## v1.1.0
+
+### Changes/Updates
+
+Removed **Node.js 16 (nodejs16.x)** from the allowed runtime list as AWS is ending support for Node.js 16 in Lambda on June 12, 2024.  [Read our blog](https://cloudpedia.ai/blog/nodejs-16-end-of-support-upgrade-now/) for more details. 
+
+### Input Variable Changes
+- Input variable **lambda_runtime** will not allow **nodejs16.x** anymore.  You can provide either **nodejs20.x** or **nodejs18.x** as runtime for Node.js.
+
+### Output Variable Changes
+None

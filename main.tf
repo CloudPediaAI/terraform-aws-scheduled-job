@@ -1,7 +1,7 @@
 locals {
   language_default = {
     nodejs = {
-      runtime            = ["nodejs20.x", "nodejs18.x", "nodejs16.x"]
+      runtime            = ["nodejs20.x", "nodejs18.x"]
       source_code_folder = "./source-code/nodejs"
       handler            = "index.handler"
     },
